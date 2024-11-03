@@ -1,0 +1,14 @@
+clear 
+clc
+
+sigma=[0.1 0.02 0.04;0.02 0.08 0.06; 0.04 0.06 0.12];
+objective = @(x)x'*sigma*x;
+n=3;
+r=[0.12 0.10 0.14]';
+x0=[0 0 0]';
+A=[];
+b=[];
+Aeq=[1 1 1];
+Beq=1;
+LB=zeros(n,1);
+x=fmincon(objective,x0,A,b,Aeq,Beq,LB,[])
