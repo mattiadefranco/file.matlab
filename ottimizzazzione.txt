@@ -24,7 +24,7 @@ function f=my_obj(x)
 f= %copio la funzione obiettivo
 end
 %in un altro script
-function [c c_eq]=my_nl(x)
+function [c, c_eq]=my_nl(x)
 c= ; %copio vincolo passando termine noto al primo membro 
 % se non ce un vincolo di disuguaglianza scrivo c=[];
 c_eq= ; 
